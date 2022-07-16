@@ -69,7 +69,7 @@ func newWindowsProcess(e *windows.ProcessEntry32) WindowsProcess {
 	}
 }
 
-func BindDefaultProcess(defaultName string) (uint32, bool) {
+func bindDefaultProcess(defaultName string) (uint32, bool) {
 	procs, err := processes()
 	if err != nil {
 		return 0, false
